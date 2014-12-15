@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="uml2context.presentation.Uml2contextModelWizardID"
+            name="%_UI_Uml2contextModelWizard_label"
+            class="uml2context.presentation.Uml2contextModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Uml2contextModelFile.gif">
+         <description>%_UI_Uml2contextModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="uml2context.presentation.Uml2contextEditorID"
+            name="%_UI_Uml2contextEditor_label"
+            icon="icons/full/obj16/Uml2contextModelFile.gif"
+            extensions="uml2context"
+            class="uml2context.presentation.Uml2contextEditor"
+            contributorClass="uml2context.presentation.Uml2contextActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
